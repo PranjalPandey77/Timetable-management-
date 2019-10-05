@@ -6,7 +6,12 @@
 package timetable.management;
 
 import java.awt.event.KeyEvent;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -152,22 +157,64 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_LoginButtonKeyPressed
 
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
-        
-        String pass=password.getText();
-        if(pass.compareTo("password")==0)
+        try
         {
-        this.setVisible(false);
-            try {
-                new TeacherTable().setVisible(true);
-            } catch (SQLException ex) {
-                Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            this.dispose();
-        }
-        else
-        {
-            JOptionPane.showMessageDialog(null,"wrong password");
-        }
+             String a=username.getText();
+             String b=password.getText();
+        Class.forName("com.mysql.jdbc.Driver");
+           
+            String url = "jdbc:mysql://localhost:3306/terminal";
+            Connection connection = DriverManager.getConnection(url, "root", "");
+            
+            Statement stmt=connection.createStatement(); 
+            String query2="SELECT * FROM user";
+            PreparedStatement preStat = connection.prepareStatement(query2);
+             ResultSet result=preStat.executeQuery();
+             System.out.println("2");
+             int count=0;
+            
+             System.out.println(a+" "+b);
+             while(result.next())
+             {
+                 String st=result.getString("name");
+                 String st2=result.getString("username");
+                 int rs=result.getInt("regno");
+                 String ps=result.getString("password");
+                 System.out.println(st2+"  "+ps);
+                 if((st2.equals(a))&&(ps.equals(b)))
+                 ++count;
+             }
+             
+             if(count==1) {
+                 System.out.println("logged in successfully ");
+                  new TeacherTable().setVisible(true);
+                  this.dispose();
+             }
+             else {
+                 JOptionPane.showMessageDialog(null,"incorrect user name or password");
+             }
+            
+            } 
+        catch (ClassNotFoundException | SQLException e) {
+            System.out.println("connection unsuccessfull");
+           
+        } // TODO add your handling code here:
+    
+//        String pass=password.getText();
+//        if(pass.compareTo("default")==0)
+//        {
+//        this.setVisible(false);
+//            try {
+//                new TeacherTable().setVisible(true);
+//            } catch (SQLException ex) {
+//                Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//            this.dispose();
+//        }
+//        else
+//        {
+//            JOptionPane.showMessageDialog(null,"wrong password");
+//        }
         
         // TODO add your handling code here:
     }//GEN-LAST:event_LoginButtonActionPerformed
