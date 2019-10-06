@@ -31,7 +31,7 @@ public class TeacherTable extends javax.swing.JFrame {
         }
 
             url = "jdbc:mysql://localhost:3306/timetable";
-            connection = DriverManager.getConnection(url, "root", "");
+            connection = DriverManager.getConnection(url, "root", "root");
         String query = "SELECT * FROM timetable";
         preStat = connection.prepareStatement(query);
             int i=0;
@@ -243,6 +243,11 @@ public class TeacherTable extends javax.swing.JFrame {
 
         L1D1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         L1D1.setText("jTextField1");
+        L1D1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                L1D1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(L1D1, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 87, -1, -1));
 
         L2D1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -538,6 +543,10 @@ public class TeacherTable extends javax.swing.JFrame {
       this.setVisible(false); 
       this.dispose();
     }//GEN-LAST:event_teachercancelActionPerformed
+
+    private void L1D1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_L1D1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_L1D1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField L1D1;

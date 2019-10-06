@@ -36,7 +36,7 @@ public class Table extends javax.swing.JFrame {
         }
 
             url = "jdbc:mysql://localhost:3306/timetable";
-            connection = DriverManager.getConnection(url, "root", "");
+            connection = DriverManager.getConnection(url, "root", "root");
         String query = "SELECT * FROM timetable";
         preStat = connection.prepareStatement(query);
             int i=0;
@@ -229,58 +229,40 @@ public class Table extends javax.swing.JFrame {
         L6D1.setText("-----");
 
         L1D2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L1D2.setText("jLabel14");
 
         L2D2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L2D2.setText("jLabel15");
 
         L3D2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L3D2.setText("jLabel16");
 
         L4D2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L4D2.setText("jLabel17");
 
         L5D2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L5D2.setText("jLabel18");
 
         L6D2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L6D2.setText("jLabel19");
 
         L1D3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L1D3.setText("jLabel20");
 
         L2D3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L2D3.setText("jLabel21");
 
         L3D3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L3D3.setText("jLabel22");
 
         L4D3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L4D3.setText("jLabel23");
 
         L5D3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L5D3.setText("jLabel24");
 
         L6D3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L6D3.setText("jLabel25");
 
         L1D4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L1D4.setText("jLabel26");
 
         L2D4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L2D4.setText("jLabel27");
 
         L3D4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L3D4.setText("jLabel28");
 
         L4D4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L4D4.setText("jLabel29");
 
         L5D4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L5D4.setText("jLabel30");
 
         L6D4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L6D4.setText("jLabel31");
 
         lacture1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lacture1.setText("8-9 AM");
@@ -301,58 +283,40 @@ public class Table extends javax.swing.JFrame {
         lacture6.setText("1-2 PM");
 
         L1D5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L1D5.setText("jLabel26");
 
         L3D5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L3D5.setText("jLabel28");
 
         L4D5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L4D5.setText("jLabel29");
 
         L5D5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L5D5.setText("jLabel30");
 
         L6D5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L6D5.setText("jLabel31");
 
         L1D6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L1D6.setText("jLabel26");
 
         L2D5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L2D5.setText("jLabel27");
 
         L2D6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L2D6.setText("jLabel27");
 
         L3D6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L3D6.setText("jLabel28");
 
         L4D6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L4D6.setText("jLabel29");
 
         L5D6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L5D6.setText("jLabel30");
 
         L6D6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L6D6.setText("jLabel31");
 
         L1D7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L1D7.setText("jLabel26");
 
         L2D7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L2D7.setText("jLabel27");
 
         L3D7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L3D7.setText("jLabel28");
 
         L4D7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L4D7.setText("jLabel29");
 
         L5D7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L5D7.setText("jLabel30");
 
         L6D7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        L6D7.setText("jLabel31");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -419,7 +383,7 @@ public class Table extends javax.swing.JFrame {
                     .addComponent(L5D5)
                     .addComponent(L5D6)
                     .addComponent(L5D7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(lacture6)
